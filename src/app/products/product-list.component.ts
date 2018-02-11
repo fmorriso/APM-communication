@@ -8,8 +8,18 @@ import {ProductService} from './product.service';
   styleUrls: ['./product-list.component.scss']
 })
 export class ProductListComponent implements OnInit {
+
   pageTitle: string = 'Product List';
-  listFilter: string;
+
+  private _listFilter: string;
+  get listFilter(): string {
+    return this._listFilter;
+  }
+  set listFilter(value: string) {
+    this._listFilter = value;
+    this.performFilter(this._listFilter);
+  }
+
   showImage: boolean;
 
   imageWidth: number = 50;
@@ -26,15 +36,15 @@ export class ProductListComponent implements OnInit {
     this.productService.getProducts().subscribe(
       (products: IProduct[]) => {
         this.products = products;
-        this.performFilter(this.listFilter);
+        this.performFilter(this._listFilter);
       },
       (error: any) => this.errorMessage = <any>error
     );
   }
-  onFilterChange(filter: string): void {
-    this.listFilter = filter;
-    this.performFilter(this.listFilter);
-  }
+/*  onFilterChange(filter: string): void {
+    this._listFilter = filter;
+    this.performFilter(this._listFilter);
+  }*/
 
   toggleImage(): void {
     this.showImage = !this.showImage;
