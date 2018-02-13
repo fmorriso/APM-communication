@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { AuthService } from '../user/auth.service';
@@ -8,6 +8,8 @@ import { AuthService } from '../user/auth.service';
   templateUrl: './menu.component.html'
 })
 export class MenuComponent implements OnInit {
+  @ViewChild('navbarToggler') navbarToggler: ElementRef;
+
   pageTitle: string = 'Acme Product Management';
 
   get isLoggedIn(): boolean {
@@ -30,5 +32,28 @@ export class MenuComponent implements OnInit {
   logOut(): void {
     this.authService.logout();
     this.router.navigate(['/welcome']);
+  }
+
+  // collapse the "hamburger stack" if it is currently expanded.
+  // Should be called on the click event of each navigation anchor.
+  // Example:
+  /*
+       <li class="nav-item" routerLinkActive="active">
+          <a (click)="collapseNav()" class="nav-link" [routerLink]="['/home']">Home</a>
+       </li>
+       <li class="nav-item" routerLinkActive="active">
+           <a (click)="collapseNav()" class="nav-link" [routerLink]="['/about']">About</a>
+       </li>
+    */
+  collapseNav() {
+    if (this.navBarTogglerIsVisible()) {
+      console.log('collapseNav in NavigationComponent clicking navbarToggler')
+      this.navbarToggler.nativeElement.click();
+    }
+  }
+
+  private navBarTogglerIsVisible() {
+    const isVisible: boolean = (this.navbarToggler.nativeElement.offsetParent !== null);
+    return isVisible;
   }
 }

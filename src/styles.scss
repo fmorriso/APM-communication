@@ -1,8 +1,20 @@
-/* You can add global styles to this file, and also import other style files */
-li {
-  font-size: large;
-}
+/* Bootstrap 4  */
+@import 'variables';
+$enable-flex: true; // Enable Flexbox mode
+@import '~bootstrap/scss/bootstrap.scss';
 
-div.panel-heading {
-  font-size: x-large;
+/* Prevent Bootstrap fixed navigation from covering up the body content */
+body {
+  padding-top: 4em;
+  margin-top: 4em;
 }
+.pm-link {
+  font-size: $font-size-h3;
+}
+/*li {
+  font-size: large;
+}*/
+/*
+div.card-header {
+  font-size: x-large;
+}*/
