@@ -5,7 +5,8 @@ import { AuthService } from '../user/auth.service';
 
 @Component({
   selector: 'pm-menu',
-  templateUrl: './menu.component.html'
+  templateUrl: './menu.component.html',
+  styleUrls: ['./menu.component.scss']
 })
 export class MenuComponent implements OnInit {
   @ViewChild('navbarToggler') navbarToggler: ElementRef;

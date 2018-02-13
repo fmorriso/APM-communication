@@ -7,8 +7,8 @@
     "build": "ng build --progress --verbose  --common-chunk --vendor-chunk --extract-css --progress --named-chunks",
     "build-watch": "ng build --progress --verbose --vendor-chunk --extract-css --named-chunks --watch",
     "build-prod": "ng build --progress --verbose --common-chunk --vendor-chunk --extract-css --named-chunks --prod --output-hashing=none --progress",
-    "start": "ng serve --open --vendor-chunk --extract-css --common-chunk --named-chunks --output-hashing=none --progress",
-    "start-prod": "ng serve --open --vendor-chunk --extract-css --common-chunk --named-chunks --prod --output-hashing=none --progress",
+    "start": "ng serve --open --vendor-chunk --extract-css --common-chunk --named-chunks --output-hashing=none --progress --port=4201",
+    "start-prod": "ng serve --open --vendor-chunk --extract-css --common-chunk --named-chunks --prod --output-hashing=none --progress --port=4201",
     "test": "ng test",
     "lint": "ng lint --typeCheck --format stylish",
     "e2e": "ng e2e"
@@ -31,7 +31,7 @@
     "zone.js": "^0.8.0"
   },
   "devDependencies": {
-    "@angular/cli": "^1.6.0",
+    "@angular/cli": "^1.7.0-rc.0",
     "@angular/compiler-cli": "^5.0.0",
     "@angular/language-service": "^5.0.0",
     "@types/jasmine": "^2.0.0",
