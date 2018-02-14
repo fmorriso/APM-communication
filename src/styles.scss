@@ -7,6 +7,14 @@ $enable-flex: true; // Enable Flexbox mode
 .pm-link {
   font-size: $font-size-h3;
 }
+
+/* Prevent Bootstrap fixed navigation from covering up the body content */
+.pm-nav-separator {
+  padding-top: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+}
 /*li {
   font-size: large;
 }*/
