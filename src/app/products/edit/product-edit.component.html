@@ -4,7 +4,7 @@
     </div>
 
     <div class="card-body">
-        <form class="form-horizontal"
+        <form class="form"
               novalidate
               (ngSubmit)="saveProduct()">
             <fieldset *ngIf="product">
@@ -12,7 +12,7 @@
                      [ngClass]="{'has-error': (productNameVar.touched ||
                                                productNameVar.dirty || product.id !== 0) &&
                                                !productNameVar.valid }">
-                    <label class="col-md-2 control-label" for="productNameId">Product Name</label>
+                    <label class="col-md-2 col-form-label font-weight-bold" for="productNameId">Product Name</label>
 
                     <div class="col-md-8">
                         <input class="form-control"
@@ -41,7 +41,7 @@
                      [ngClass]="{'has-error': (productCodeVar.touched ||
                                                productCodeVar.dirty || product.id !== 0) &&
                                                !productCodeVar.valid }">
-                    <label class="col-md-2 control-label" for="productCodeId">Product Code</label>
+                    <label class="col-md-2 col-form-label font-weight-bold" for="productCodeId">Product Code</label>
 
                     <div class="col-md-8">
                         <input class="form-control"
@@ -63,7 +63,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label class="col-md-2 control-label" for="descriptionId">Description</label>
+                    <label class="col-md-2 col-form-label font-weight-bold" for="descriptionId">Description</label>
 
                     <div class="col-md-8">
                         <textarea class="form-control"
@@ -81,17 +81,17 @@
                 <div class="form-group">
                     <div class="col-md-4 col-md-offset-2">
                         <span>
-                            <button class="btn btn-primary" type="submit" style="width:80px;margin-right:10px" [disabled]='!editForm.valid'>
+                            <button class="btn btn-primary col-3" type="submit"  [disabled]='!editForm.valid'>
                                 Save
                             </button>
                         </span>
                         <span>
-                            <a class="btn btn-default" style="width:80px" (click)="cancel()">
+                            <a class="btn btn-secondary btn-outline-secondary col-3"  (click)="cancel()">
                                 Cancel
                             </a>
                         </span>
                         <span>
-                            <a class="btn btn-default" style="width:80px" (click)="deleteProduct()">
+                            <a class="btn btn-secondary btn-outline-secondary col-3"  (click)="deleteProduct()">
                                 Delete
                             </a>
                         </span>
