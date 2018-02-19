@@ -16,19 +16,19 @@ Notes taken starting in early February 2018
 ## Replace Glyphicons with Font-Awesome
 [tutorial](https://medium.com/@beeman/tutorial-add-bootstrap-to-angular-cli-apps-b0a652f2eb2)
 
-Version 1.5.3 was OK
-$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
-
-For version 1.6.3 I must change this to:
-$icon-font-path: "../node_modules/bootstrap-sass/assets/fonts/bootstrap/";
-
-.angular-cli.json:
-
-  // styles
-  "../node_modules/font-awesome/css/font-awesome.css"
+### using SCSS
+https://github.com/angular/angular-cli/blob/master/docs/documentation/stories/include-font-awesome.md#using-sass
   
-  // assets
-  "../node_modules/font-awesome/fonts"
+1. Create an empty file named `_variables.scss` in src/.  
+1. Add the following to `_variables.scss`:
+    ```  
+    $fa-font-path : '../node_modules/font-awesome/fonts';
+    ```  
+1. In styles.scss add the following:
+    ```  
+    @import 'variables';
+    @import '../node_modules/font-awesome/scss/font-awesome';
+    ```
 ## Port in Use error and work-around
 https://github.com/angular/angular-cli/issues/4201
 ```
