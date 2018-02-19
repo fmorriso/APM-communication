@@ -1,4 +1,5 @@
-import {AfterViewInit, Component, ElementRef, Input, OnChanges, OnInit, SimpleChanges, ViewChild} from '@angular/core';
+import {AfterViewInit, Component, ElementRef, Input, OnChanges,
+  OnInit, SimpleChanges, ViewChild} from '@angular/core';
 
 @Component({
   selector: 'pm-criteria',
@@ -31,7 +32,7 @@ export class CriteriaComponent implements OnInit, OnChanges, AfterViewInit {
     if (changes['hitCount'] && !changes['hitCount'].currentValue) {
       this.hitMessage = 'No matches found';
     } else {
-      this.hitMessage = 'Hits:' + this.hitCount;
+      this.hitMessage = `Hits:${this.hitCount}`;
     }
   }
 

@@ -8,7 +8,7 @@
     "build-watch": "ng build --progress --verbose --vendor-chunk --extract-css --named-chunks --watch",
     "build-prod": "ng build --progress --verbose --common-chunk --vendor-chunk --extract-css --named-chunks --prod --output-hashing=none --progress",
     "start": "ng serve --open --vendor-chunk --extract-css --common-chunk --named-chunks --output-hashing=none --progress ",
-    "start-prod": "ng serve --open --vendor-chunk --extract-css --common-chunk --named-chunks --prod --output-hashing=none --progress --port=4202",
+    "start-prod": "ng serve --open --vendor-chunk --extract-css --common-chunk --named-chunks --prod --output-hashing=none --progress",
     "test": "ng test",
     "lint": "ng lint --typeCheck --format stylish",
     "e2e": "ng e2e"
@@ -28,9 +28,10 @@
     "bootstrap": "^4.0.0",
     "core-js": "^2.0.0",
     "font-awesome": "^4.7.0",
-    "jquery": "^3.3.1",
-    "popper.js": "^1.12.9",
+    "jquery": "^3.0.0",
+    "popper.js": "^1.0.0",
     "rxjs": "^5.0.0",
+    "tether": "^1.4.3",
     "zone.js": "^0.8.0"
   },
   "devDependencies": {
@@ -40,7 +41,7 @@
     "@types/jasmine": "^2.0.0",
     "@types/jasminewd2": "^2.0.0",
     "@types/node": "^6.0.0",
-    "angular-in-memory-web-api": "^0.5.1",
+    "angular-in-memory-web-api": "^0.5.0",
     "codelyzer": "^4.0.0",
     "jasmine-core": "^2.0.0",
     "jasmine-spec-reporter": "^4.0.0",

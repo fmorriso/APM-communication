@@ -1,12 +1,9 @@
 /* Bootstrap 4  */
-@import 'variables';
+@import 'variables'; // _variables.scss located in src directory of this app
 $enable-flex: true; // Enable Flexbox mode
 @import '~bootstrap/scss/bootstrap.scss';
 
-//BAD: $fa-font-path: "~font-awesome/font";
-//$fa-font-path: "../node_modules/font-awesome/font";
-//@import "~font-awesome/scss/font-awesome";
-@import 'variables';
+//@import '~font-awesome/scss/font-awesome';
 @import '../node_modules/font-awesome/scss/font-awesome';
 
 

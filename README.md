@@ -16,8 +16,8 @@ Notes taken starting in early February 2018
 ## Replace Glyphicons with Font-Awesome
 [tutorial](https://medium.com/@beeman/tutorial-add-bootstrap-to-angular-cli-apps-b0a652f2eb2)
 
-### using SCSS
-https://github.com/angular/angular-cli/blob/master/docs/documentation/stories/include-font-awesome.md#using-sass
+### Using Font-Awesome SCSS in Angular-CLI
+[reference](https://github.com/angular/angular-cli/blob/master/docs/documentation/stories/include-font-awesome.md#using-sass)
   
 1. Create an empty file named `_variables.scss` in src/.  
 1. Add the following to `_variables.scss`:
