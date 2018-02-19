@@ -14,24 +14,24 @@
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item" routerLinkActive="active">
-          <a class="nav-link pm-link"  routerLink='/welcome'>Home</a>
+          <a (click)="collapseNav()" class="nav-link pm-link"  routerLink='/welcome'>Home</a>
         </li>
         <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
-          <a class="nav-link pm-link"  routerLink='/products'>Product List</a>
+          <a (click)="collapseNav()" class="nav-link pm-link"  routerLink='/products'>Product List</a>
         </li>
         <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
-          <a class="nav-link pm-link"  [routerLink]="['/products', 0, 'edit']">Add Product</a>
+          <a (click)="collapseNav()" class="nav-link pm-link"  [routerLink]="['/products', 0, 'edit']">Add Product</a>
         </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li class="nav-item" *ngIf="isLoggedIn">
-          <a class="nav-link pm-link" routerLink='/login'>Welcome {{ userName }}</a>
+          <a (click)="collapseNav()" class="nav-link pm-link" routerLink='/login'>Welcome {{ userName }}</a>
         </li>
         <li class="nav-item" *ngIf="!isLoggedIn">
-          <a class="nav-link pm-link"  routerLink='/login'>Log In</a>
+          <a (click)="collapseNav()" class="nav-link pm-link"  routerLink='/login'>Log In</a>
         </li>
         <li class="nav-item" *ngIf="isLoggedIn">
-          <a class="nav-link pm-link"  (click)="logOut()" style="cursor: pointer">Log Out</a>
+          <a (click)="collapseNav()" class="nav-link pm-link"  (click)="logOut()" style="cursor: pointer">Log Out</a>
         </li>
       </ul>
     </div>
