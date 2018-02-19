@@ -13,7 +13,22 @@ Notes taken starting in early February 2018
 
 ## Missing dependency in package.json
  "angular-in-memory-web-api": "latest",
+## Replace Glyphicons with Font-Awesome
+[tutorial](https://medium.com/@beeman/tutorial-add-bootstrap-to-angular-cli-apps-b0a652f2eb2)
 
+Version 1.5.3 was OK
+$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
+
+For version 1.6.3 I must change this to:
+$icon-font-path: "../node_modules/bootstrap-sass/assets/fonts/bootstrap/";
+
+.angular-cli.json:
+
+  // styles
+  "../node_modules/font-awesome/css/font-awesome.css"
+  
+  // assets
+  "../node_modules/font-awesome/fonts"
 ## Port in Use error and work-around
 https://github.com/angular/angular-cli/issues/4201
 ```

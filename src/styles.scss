@@ -3,6 +3,10 @@
 $enable-flex: true; // Enable Flexbox mode
 @import '~bootstrap/scss/bootstrap.scss';
 
+//BAD: $fa-font-path: "~font-awesome/font";
+//$fa-font-path: "../node_modules/font-awesome/font";
+//@import "~font-awesome/scss/font-awesome";
+
 
 .pm-link {
   font-size: $font-size-h3;
