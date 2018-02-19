@@ -1,5 +1,7 @@
-import {AfterViewInit, Component, ElementRef, Input, OnChanges,
-  OnInit, SimpleChanges, ViewChild} from '@angular/core';
+import {
+  AfterViewInit, Component, ElementRef, EventEmitter, Input, OnChanges,
+  OnInit, Output, SimpleChanges, ViewChild
+} from '@angular/core';
 
 @Component({
   selector: 'pm-criteria',
@@ -13,10 +15,22 @@ import {AfterViewInit, Component, ElementRef, Input, OnChanges,
       </pm-criteria>
 */
 export class CriteriaComponent implements OnInit, OnChanges, AfterViewInit {
-  listFilter: string;
+
+  private _listFilter: string;
+  get listFilter(): string {
+    return this._listFilter;
+  }
+  set listFilter(value: string) {
+    this._listFilter = value;
+    // emit event so that listeners, such as the parent of this component can react
+    this.valueChange.emit(value);
+  }
+
   @Input() displayDetail: boolean;
   @Input() hitCount: number;
   hitMessage: string;
+  // allow parent component to listen for value changes in the filter
+  @Output() valueChange: EventEmitter<string> = new EventEmitter<string>();
 
   @ViewChild('filterElement') filterElementRef: ElementRef;
 
