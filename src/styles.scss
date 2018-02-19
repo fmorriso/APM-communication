@@ -8,7 +8,7 @@ $enable-flex: true; // Enable Flexbox mode
   font-size: $font-size-h3;
 }
 
-/* Prevent Bootstrap fixed navigation from covering up the body content */
+/* Prevent Bootstrap 4 fixed navigation from covering up the body content */
 .pm-nav-separator {
   padding-top: 1rem;
   margin-top: 1rem;
@@ -16,6 +16,9 @@ $enable-flex: true; // Enable Flexbox mode
   padding-bottom: 1rem;
 }
 
+div.card-header {
+  font-size: $font-size-lg;
+}
 /*li {
   font-size: large;
 }*/

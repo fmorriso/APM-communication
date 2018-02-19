@@ -7,7 +7,7 @@
     "build": "ng build --progress --verbose  --common-chunk --vendor-chunk --extract-css --progress --named-chunks",
     "build-watch": "ng build --progress --verbose --vendor-chunk --extract-css --named-chunks --watch",
     "build-prod": "ng build --progress --verbose --common-chunk --vendor-chunk --extract-css --named-chunks --prod --output-hashing=none --progress",
-    "start": "ng serve --open --vendor-chunk --extract-css --common-chunk --named-chunks --output-hashing=none --progress --port=4203",
+    "start": "ng serve --open --vendor-chunk --extract-css --common-chunk --named-chunks --output-hashing=none --progress ",
     "start-prod": "ng serve --open --vendor-chunk --extract-css --common-chunk --named-chunks --prod --output-hashing=none --progress --port=4202",
     "test": "ng test",
     "lint": "ng lint --typeCheck --format stylish",
@@ -27,6 +27,8 @@
     "@angular/router": "^5.0.0",
     "bootstrap": "^4.0.0",
     "core-js": "^2.0.0",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.12.9",
     "rxjs": "^5.0.0",
     "zone.js": "^0.8.0"
   },
