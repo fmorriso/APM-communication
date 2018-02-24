@@ -21,8 +21,8 @@ $enable-flex: true; // Enable Flexbox mode
 
 // prevent card from bumping into the bottom of the navigation area above it
 div.card {
-  padding-top: 1rem;
-  margin-top: 1rem;
+  //padding-top: 1rem;
+  margin-top: 2rem;
 }
 
 div.card-header {
