@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import {RouterModule, Routes} from '@angular/router';
 
 import { SharedModule } from '../shared/shared.module';
 
@@ -15,18 +15,30 @@ import {ProductShellListComponent} from './product-shell/product-shell-list.comp
 import { ProductShellComponent } from './product-shell/product-shell.component';
 
 
+const routesSeparatePages: Routes = [
+  { path: '', component: ProductListComponent },
+  { path: ':id', component: ProductDetailComponent },
+  {
+    path: ':id/edit',
+    canDeactivate: [ ProductEditGuard ],
+    component: ProductEditComponent
+  }
+];
+
+const routesSideBySide: Routes = [
+  { path: '', component: ProductShellComponent },
+  { path: ':id', component: ProductDetailComponent },
+  {
+    path: ':id/edit',
+    canDeactivate: [ ProductEditGuard ],
+    component: ProductEditComponent
+  }
+];
+
 @NgModule({
   imports: [
     SharedModule,
-    RouterModule.forChild([
-      { path: '', component: ProductListComponent },
-      { path: ':id', component: ProductDetailComponent },
-      {
-        path: ':id/edit',
-        canDeactivate: [ ProductEditGuard ],
-        component: ProductEditComponent
-      }
-    ])
+    RouterModule.forChild(routesSideBySide)
   ],
   declarations: [
     ProductListComponent,

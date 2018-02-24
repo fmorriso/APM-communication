@@ -8,11 +8,15 @@ import { IProduct } from '../product';
 })
 export class ProductShellDetailComponent implements OnInit {
     pageTitle: string = 'Product Detail';
-    product: IProduct;
+
+    get product(): IProduct | null {
+        return this.productService.currentProduct;
+    }
 
     constructor(private productService: ProductService) { }
 
     ngOnInit() {
+      //console.log(JSON.stringify(this.product));
     }
 
 }
