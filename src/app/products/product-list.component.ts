@@ -5,7 +5,7 @@ import {ProductService} from './product.service';
 import {NgModel} from '@angular/forms';
 import {Subscription} from 'rxjs/Subscription';
 import {CriteriaComponent} from '../shared/criteria/criteria.component';
-import {ProductParamterService} from './product-paramter.service';
+import {ProductParameterService} from './product-parameter.service';
 
 @Component({
   templateUrl: './product-list.component.html',
@@ -41,7 +41,7 @@ export class ProductListComponent implements OnInit, AfterViewInit {
   }
 
   constructor(private productService: ProductService,
-              private productParameterService: ProductParamterService) {
+              private productParameterService: ProductParameterService) {
   }
 
   ngAfterViewInit(): void {

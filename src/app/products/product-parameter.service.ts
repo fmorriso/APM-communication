@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
 @Injectable()
-export class ProductParamterService {
+export class ProductParameterService {
   showImage: boolean;
   filterBy: string;
 
