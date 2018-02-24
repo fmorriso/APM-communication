@@ -1,9 +1,9 @@
-﻿<div class='panel panel-primary' *ngIf='product'>
-    <div class='panel-heading'>
+﻿<div class='card' *ngIf='product'>
+    <div class='card-header bg-primary text-light'>
         {{pageTitle + ': ' + product.productName}}
     </div>
 
-    <div class='panel-body'>
+    <div class='card-body'>
         <div class='row'>
             <div class='col-md-6'>
                 <div class='row'>
@@ -46,7 +46,7 @@
         </div>
     </div>
 
-    <div class='panel-footer'>
+    <div class='card-footer'>
         <a class='btn btn-secondary btn-outline-secondary'  style='width:80px' (click)='onBack()'>
             <i class='glyphicon glyphicon-chevron-left'></i> Back
         </a>

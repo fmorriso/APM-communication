@@ -15,12 +15,18 @@ $enable-flex: true; // Enable Flexbox mode
 .pm-nav-separator {
   padding-top: 1rem;
   margin-top: 1rem;
-  margin-bottom: 1rem;
   padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+// prevent card from bumping into the bottom of the navigation area above it
+div.card {
+  padding-top: 1rem;
+  margin-top: 1rem;
 }
 
 div.card-header {
-  font-size: $font-size-lg;
+  font-size: $font-size-h3;
 }
 /*li {
   font-size: large;
