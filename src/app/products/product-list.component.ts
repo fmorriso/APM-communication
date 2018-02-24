@@ -5,14 +5,18 @@ import {ProductService} from './product.service';
 import {NgModel} from '@angular/forms';
 import {Subscription} from 'rxjs/Subscription';
 import {CriteriaComponent} from '../shared/criteria/criteria.component';
+import {ProductParamterService} from './product-paramter.service';
 
 @Component({
   templateUrl: './product-list.component.html',
   styleUrls: ['./product-list.component.scss']
 })
 export class ProductListComponent implements OnInit, AfterViewInit {
+
+
+
   pageTitle: string = 'Product List';
-  showImage: boolean;
+
   includeDetail: boolean = true;
 
   // the following lines allow the parent to see and use the child
@@ -26,7 +30,15 @@ export class ProductListComponent implements OnInit, AfterViewInit {
   filteredProducts: IProduct[];
   products: IProduct[];
 
-  constructor(private productService: ProductService) {
+  get showImage(): boolean {
+    return this.productParameterService.showImage;
+  }
+
+  set showImage(value: boolean) {
+    this.productParameterService.showImage = value;
+  }
+  constructor(private productService: ProductService,
+              private productParameterService: ProductParamterService) {
   }
 
   ngAfterViewInit(): void {

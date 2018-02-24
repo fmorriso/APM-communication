@@ -37,9 +37,9 @@
 
             <div class='col-md-6'>
                 <img *ngIf='product.imageUrl'
-                     class='center-block img-responsive' 
-                     [style.width.px]='200' 
-                     [style.margin.px]='2' 
+                     class='center-block img-responsive'
+                     [style.width.px]='200'
+                     [style.margin.px]='2'
                      [src]='product.imageUrl'
                      [title]='product.productName'>
             </div>
@@ -47,7 +47,7 @@
     </div>
 
     <div class='panel-footer'>
-        <a class='btn btn-default'  style='width:80px' (click)='onBack()'>
+        <a class='btn btn-secondary btn-outline-secondary'  style='width:80px' (click)='onBack()'>
             <i class='glyphicon glyphicon-chevron-left'></i> Back
         </a>
         <a class="btn btn-primary" style="width:80px" [routerLink]="['/products', product.id, 'edit']">

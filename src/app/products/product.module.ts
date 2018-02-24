@@ -12,6 +12,7 @@ import { ProductEditGuard } from './edit/product-edit-guard.service';
 import {ProductShellComponent} from './product-shell/product-shell.component';
 import {ProductShellDetailComponent} from './product-shell/product-shell-detail.component';
 import {ProductShellListComponent} from './product-shell/product-shell-list.component';
+import { ProductParamterService } from './product-paramter.service';
 
 @NgModule({
   imports: [
@@ -36,7 +37,8 @@ import {ProductShellListComponent} from './product-shell/product-shell-list.comp
   ],
   providers: [
     ProductService,
-    ProductEditGuard
+    ProductEditGuard,
+    ProductParamterService
   ]
 })
 export class ProductModule { }

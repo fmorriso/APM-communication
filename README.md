@@ -48,3 +48,8 @@ https://blogs.technet.microsoft.com/heyscriptingguy/2015/08/19/parsing-netstat-i
 
 [Text sizing](https://getbootstrap.com/docs/4.0/utilities/sizing/)
 
+## angular-ngrx-data - simplify use of ngRx pattern
+[introduction](https://github.com/johnpapa/angular-ngrx-data/blob/master/docs/introduction.md#introduction-to-ngrx-data)
+
+[github](https://github.com/johnpapa/angular-ngrx-data)
+
