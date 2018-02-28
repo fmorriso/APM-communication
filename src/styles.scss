@@ -3,8 +3,8 @@
 $enable-flex: true; // Enable Flexbox mode
 @import '~bootstrap/scss/bootstrap.scss';
 
-//@import '~font-awesome/scss/font-awesome';
-@import '../node_modules/font-awesome/scss/font-awesome';
+@import '~font-awesome/scss/font-awesome';
+//@import '../node_modules/font-awesome/scss/font-awesome';
 
 
 .pm-link {
