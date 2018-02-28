@@ -1,6 +1,20 @@
 # APM Component Communication
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.7.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.1 and Angular 5.2.6.
+
+## My GitHub
+[My GitHub](https://github.com/fmorriso/APM-communication)
+
+## Modifications
+* Upgraded Angular-CLI to 1.7.1
+* Upgraded Angular to 5.2.6
+* Upgraded Bootstrap to 4.0.0
+* Changed style from CSS to SCSS to better mesh with Bootstrap 4.x
+* Override of Bootstrap 4.0 variables via _variables.scss
+* Added Font Awesome to replace old Bootstrap 3.x icons no longer included with Bootstrap 4.x
+* Converted all Bootstrap 3.x Panel to Card
+* Converted Bootstrap 3.x navigation to Bootstrap 4.x navigation, including "hamburger stack" collapse click event.
+* Put Angular routes into separate variables of type Routes. 
 
 ## Developer Notes
 Notes taken starting in early February 2018
@@ -8,8 +22,6 @@ Notes taken starting in early February 2018
 [Problem Solver](http://blogs.msmvps.com/deborahk/angular-component-communication-problem-solver)
 
 [GitHub](https://github.com/DeborahK/Angular-Communication)
-## My GitHub
-[My private GitHub](https://github.com/fmorriso/APM-communication)
 
 ## Missing dependency in package.json
  "angular-in-memory-web-api": "latest",
@@ -29,7 +41,7 @@ Notes taken starting in early February 2018
     @import 'variables';
     @import '../node_modules/font-awesome/scss/font-awesome';
     ```
-## Port in Use error and work-around
+## Port in Use error and work-around (no longer needed: Angular-CLI 1.7.1 fixed it)
 https://github.com/angular/angular-cli/issues/4201
 ```
 netstat -a -o -n
