@@ -7,7 +7,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Modifications
 * Upgraded Angular-CLI to 1.7.1
-* Upgraded Angular to 5.2.6
+* Upgraded Angular to 5.2.7
 * Upgraded Bootstrap to 4.0.0
 * Changed style from CSS to SCSS to better mesh with Bootstrap 4.x
 * Override of Bootstrap 4.0 variables via _variables.scss
