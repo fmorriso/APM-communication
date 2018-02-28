@@ -38,7 +38,7 @@ const routesSideBySide: Routes = [
 @NgModule({
   imports: [
     SharedModule,
-    RouterModule.forChild(routesSideBySide)
+    RouterModule.forChild(routesSeparatePages)
   ],
   declarations: [
     ProductListComponent,
