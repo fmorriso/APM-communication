@@ -30,11 +30,8 @@
             </div>
           </div>
 
-          <div class="form-group" [ngClass]="{'has-error': (passwordVar.touched ||
-                                                passwordVar.dirty) &&
-                                                !passwordVar.valid }">
+          <div class="form-group" [ngClass]="{'has-error': (passwordVar.touched || passwordVar.dirty) && !passwordVar.valid }">
             <label class="col-md-2 col-form-label font-weight-bold" for="passwordId">Password</label>
-
             <div class="col-md-8">
               <input class="form-control"
                      id="passwordId"
@@ -43,31 +40,16 @@
                      required
                      ngModel
                      name="password" #passwordVar="ngModel"/>
-              <span class="help-block" *ngIf="(passwordVar.touched ||
-                                                                 passwordVar.dirty) &&
-                                                                 passwordVar.errors">
-                                <span *ngIf="passwordVar.errors.required">
-                                    Password is required.
-                                </span>
-                                </span>
+              <span class="help-block" *ngIf="(passwordVar.touched || passwordVar.dirty) && passwordVar.errors">
+                <span *ngIf="passwordVar.errors.required">Password is required.</span>
+              </span>
             </div>
           </div>
 
           <div class="form-group">
             <div class="col-md-4 col-md-offset-2">
-                                <span>
-                                <button class="btn btn-primary col-3"
-                                        type="submit"
-                                        [disabled]="!loginForm.valid">
-                                    Log In
-                                </button>
-                            </span>
-              <span>
-                                <a class="btn btn-secondary btn-outline-secondary col-3"
-                                   (click)="cancel()">
-                                    Cancel
-                                </a>
-                            </span>
+              <button class="btn btn-primary col-3" type="submit" [disabled]="!loginForm.valid">Log In</button>
+              <a class="btn btn-secondary btn-outline-secondary col-3" (click)="cancel()">Cancel</a>
             </div>
           </div>
         </fieldset>
